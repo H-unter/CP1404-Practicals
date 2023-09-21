@@ -6,13 +6,10 @@ Use a main menu following the standard menu pattern.
 
 The menu should have four separate options:
 
-(G)et a valid score (must be 0-100 inclusive)
-(P)rint result (copy or import your function to determine the result from score.py)
-(S)how stars (this should print as many stars as the score)
-(Q)uit
-Handle each of these (except quit) separately, and consider how you can reuse your functions. In main(), before the menu loop, get the valid score.
-When the user quits, say some kind of "farewell".
-"""
+(G)et a valid score (must be 0-100 inclusive) (P)rint result (copy or import your function to determine the result
+from score.py) (S)how stars (this should print as many stars as the score) (Q)uit Handle each of these (except quit)
+separately, and consider how you can reuse your functions. In main(), before the menu loop, get the valid score. When
+the user quits, say some kind of "farewell"."""
 
 
 def main():
@@ -21,7 +18,10 @@ def main():
 (S)how stars 
 (Q)uit"""
     score = int(input("Enter a score between 1 and 100: "))
-    # is_valid_score()
+    while is_invalid_score(score):
+        print("Invalid score")
+        score = int(input("Enter a score between 1 and 100: "))
+
     print(menu)
     choice = input(">>> ").upper
     while choice != "Q":
@@ -43,6 +43,10 @@ def main():
             pass
         print(menu)
         choice = input(">>> ").upper()
+
+
+def is_invalid_score(score):
+    return score < 0 or score > 100
 
 
 main()
