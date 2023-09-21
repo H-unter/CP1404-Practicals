@@ -26,11 +26,11 @@ def main():
     choice = input(">>> ").upper
     while choice != "Q":
         if choice == "G":
-            # (G)et a valid score
-            print("G")
-            pass
+            score = int(input("Enter a score between 1 and 100: "))
+            while is_invalid_score(score):
+                print("Invalid score")
+                score = int(input("Enter a score between 1 and 100: "))
         elif choice == "P":
-            # (P)rint result
             print("P")
             pass
         elif choice == "S":
