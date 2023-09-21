@@ -33,15 +33,14 @@ def main():
         elif choice == "P":
             print(determine_performance(score))
         elif choice == "S":
-            # (S)how stars
-            print("S")
-            pass
+            print(score*"*")
         else:
             # Invalid option
             print("Invalid")
             pass
         print(menu)
         choice = input(">>> ").upper()
+    print("Farewell")
 
 
 def is_invalid_score(score):
