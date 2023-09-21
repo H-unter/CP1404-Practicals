@@ -31,8 +31,7 @@ def main():
                 print("Invalid score")
                 score = int(input("Enter a score between 1 and 100: "))
         elif choice == "P":
-            print("P")
-            pass
+            print(determine_performance(score))
         elif choice == "S":
             # (S)how stars
             print("S")
@@ -47,6 +46,15 @@ def main():
 
 def is_invalid_score(score):
     return score < 0 or score > 100
+
+
+def determine_performance(score):
+    if score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
 
 
 main()
