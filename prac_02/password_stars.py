@@ -22,5 +22,4 @@ def get_password(minimum_length):
     return password
 
 
-
 main()
