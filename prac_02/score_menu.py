@@ -44,10 +44,12 @@ def main():
 
 
 def is_invalid_score(score):
+    """Return true if user's score input is invalid"""
     return score < 0 or score > 100
 
 
 def determine_performance(score):
+    """Return a comment about performance based on an input score"""
     if score >= 90:
         return "Excellent"
     elif score >= 50:
