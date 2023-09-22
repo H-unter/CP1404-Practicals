@@ -1,5 +1,5 @@
 """
-CP1404 Practical 01 Hunter Kruger-Ilingworth
+CP1404 Practical 02 Hunter Kruger-Ilingworth
 Program to determine score status
 """
 import random

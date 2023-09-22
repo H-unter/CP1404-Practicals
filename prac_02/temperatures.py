@@ -1,14 +1,14 @@
 """
 CP1404 Practical 02 Hunter Kruger-Ilingworth
-Temperature conversion script
+Temperature conversion script adapted from previous week's prac
 """
 
 
 def main():
-    MENU = """C - Convert Celsius to Fahrenheit
+    menu = """C - Convert Celsius to Fahrenheit
     F - Convert Fahrenheit to Celsius
     Q - Quit"""
-    print(MENU)
+    print(menu)
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "C":
@@ -21,7 +21,7 @@ def main():
             print(f"Result: {celsius_out:.2f} F")
         else:
             print("Invalid option")
-        print(MENU)
+        print(menu)
         choice = input(">>> ").upper()
     print("Thank you.")
 
@@ -32,12 +32,10 @@ def convert_fahrenheit_to_celsius(fahrenheit):
     return celsius
 
 
-
 def convert_celsius_to_fahrenheit(celsius):
     """converts Celsius to Fahrenheit"""
     fahrenheit = celsius * 9.0 / 5 + 32
     return fahrenheit
-
 
 
 main()

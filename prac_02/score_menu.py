@@ -1,15 +1,7 @@
 """
 CP1404 Practical 02 Hunter Kruger-Ilingworth
-Brief:
-Write a complete Python program following the standard structure that uses a main and other functions.
-Use a main menu following the standard menu pattern.
-
-The menu should have four separate options:
-
-(G)et a valid score (must be 0-100 inclusive) (P)rint result (copy or import your function to determine the result
-from score.py) (S)how stars (this should print as many stars as the score) (Q)uit Handle each of these (except quit)
-separately, and consider how you can reuse your functions. In main(), before the menu loop, get the valid score. When
-the user quits, say some kind of "farewell"."""
+Menu program with carryover functionality from score.py
+"""
 
 
 def main():
