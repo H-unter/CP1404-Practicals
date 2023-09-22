@@ -18,6 +18,7 @@ def main():
 
 
 def determine_performance(score):
+    """Return a comment about performance based on an input score"""
     if score >= 90:
         return "Excellent"
     elif score >= 50:
