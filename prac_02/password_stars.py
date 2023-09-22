@@ -11,10 +11,12 @@ def main():
 
 
 def print_asterisks(password):
+    """Print an amount of asterisks equal to the length of the input string"""
     print(len(password) * "*")
 
 
 def get_password(minimum_length):
+    """Get a valid password from the user"""
     password = input("Enter password: ")
     while len(password) < minimum_length:
         print(f"Password must be at least {minimum_length} characters long.")
