@@ -23,7 +23,7 @@ def main():
         score = int(input("Enter a score between 1 and 100: "))
 
     print(menu)
-    choice = input(">>> ").upper
+    choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
             score = int(input("Enter a score between 1 and 100: "))
