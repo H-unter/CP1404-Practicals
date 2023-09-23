@@ -1,10 +1,11 @@
 """
 CP1404 Practical 02 Hunter Kruger-Ilingworth
-Temperature conversion script adapted from previous week's prac
+Temperature conversion program which can convert between Celsius and Fahrenheit
 """
 
 
 def main():
+    """Convert temperature between Celsius and Fahrenheit"""
     menu = """C - Convert Celsius to Fahrenheit
     F - Convert Fahrenheit to Celsius
     Q - Quit"""
@@ -27,13 +28,13 @@ def main():
 
 
 def convert_fahrenheit_to_celsius(fahrenheit):
-    """converts Fahrenheit to Celsius"""
+    """Convert Fahrenheit to Celsius"""
     celsius = 5 / 9 * (fahrenheit - 32)
     return celsius
 
 
 def convert_celsius_to_fahrenheit(celsius):
-    """converts Celsius to Fahrenheit"""
+    """Convert Celsius to Fahrenheit"""
     fahrenheit = celsius * 9.0 / 5 + 32
     return fahrenheit
 
