@@ -1,10 +1,11 @@
 """
 CP1404 Practical 02 Hunter Kruger-Ilingworth
-Menu program with carryover functionality from score.py
+User interface program where users can choose to determine their score performance, print stars, or exit
 """
 
 
 def main():
+    """Show user interface to acquire valid score, rate it and print stars"""
     menu = """(G)et a valid score 
 (P)rint result 
 (S)how stars 
@@ -41,7 +42,7 @@ def is_invalid_score(score):
 
 
 def determine_performance(score):
-    """Return a comment about performance based on an input score"""
+    """Return comment about performance based on an input score"""
     if score >= 90:
         return "Excellent"
     elif score >= 50:

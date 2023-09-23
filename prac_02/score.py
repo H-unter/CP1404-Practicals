@@ -1,11 +1,13 @@
 """
 CP1404 Practical 02 Hunter Kruger-Ilingworth
-Program to determine score status
+Program to determine score performance of user and randomly generated scores
 """
+
 import random
 
 
 def main():
+    """Get valid user score and print user performance and performance of random score"""
     score = float(input("Enter score: "))
     while score < 0 or score > 100:
         print("Invalid score")
