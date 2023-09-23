@@ -26,14 +26,17 @@ def main():
         elif choice == "P":
             print(determine_performance(score))
         elif choice == "S":
-            print(score*"*")
-        else:
-            # Invalid option
+            print(get_star_string(score))
+        else:  # Invalid option
             print("Invalid")
             pass
         print(menu)
         choice = input(">>> ").upper()
     print("Farewell")
+
+
+def get_star_string(score):
+    return score * "*"
 
 
 def is_invalid_score(score):
