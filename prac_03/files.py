@@ -12,6 +12,7 @@ Now write a fourth block of code that prints the total for all lines in numbers.
 numbers."""
 
 name_file = "name.txt"
+number_file = "numbers.txt"
 
 name = input("What is your name? ")
 with open(name_file, "w") as file:
@@ -20,3 +21,10 @@ with open(name_file, "w") as file:
 with open(name_file, "r") as file:
     text = file.read()
     print(f"Your name is {text}")
+
+numbers = []
+with open(number_file, "r") as file:
+    for line in file:
+        numbers.append(int(line.strip()))
+result = numbers[0] + numbers[1]  # written in a way that is easily extendable for future functionality
+print(result)
