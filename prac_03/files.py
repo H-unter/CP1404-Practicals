@@ -28,3 +28,4 @@ with open(number_file, "r") as file:
         numbers.append(int(line.strip()))
 result = numbers[0] + numbers[1]  # written in a way that is easily extendable for future functionality
 print(result)
+print(sum(numbers))
