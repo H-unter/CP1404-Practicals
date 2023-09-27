@@ -23,3 +23,6 @@ What was the smallest number you could have seen,
 what was the largest?
 >> 5.5
 """
+
+number = random.randint(0, 100)
+print(number)
