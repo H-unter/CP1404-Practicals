@@ -34,9 +34,5 @@ for i, number in enumerate(numbers, 1):
 
 print(f"{year} {name} for about ${cost:,.0f}!")
 
-# TODO: Using a for loop with the range function and string formatting,
-# produce the following right-aligned output (DO NOT use a list):
-#   0
-#  50
-# 100
-# 150
+for i in range(0, 151, 50):
+    print(f"{i:4}")
