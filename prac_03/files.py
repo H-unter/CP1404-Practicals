@@ -10,3 +10,6 @@ Create a text file called numbers.txt and save it in your prac directory. Put th
 Write code that opens "numbers.txt", reads only the first two numbers and adds them together then prints the result, which should be... 59.
 
 Now write a fourth block of code that prints the total for all lines in numbers.txt or a file with any number of numbers."""
+name = input("What is your name? ")
+with open("name.txt", "w") as out_file:
+    print(f"Name: {name}", file=out_file)
