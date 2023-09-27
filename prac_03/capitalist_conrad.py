@@ -9,6 +9,7 @@ The price should be displayed to the nearest cent (e.g. $33.59, not $33.59182329
 """
 import random
 
+OUTPUT_FILE = "output_file.txt"
 MAX_INCREASE = 0.175
 MAX_DECREASE = 0.05
 MIN_PRICE = 1.0
@@ -18,7 +19,8 @@ number_of_days = 0
 
 price = INITIAL_PRICE
 print(f"On day {number_of_days} price is: ${price:,.2f}")
-
+with open(OUTPUT_FILE, "w") as out_file:  # write to file in order to override previously written data
+    print(f"On day {number_of_days} price is: ${price:,.2f}", file=out_file)
 while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
     # generate a random integer of 1 or 2
@@ -35,3 +37,5 @@ while MIN_PRICE <= price <= MAX_PRICE:
     price *= (1 + price_change)
     number_of_days += 1
     print(f"On day {number_of_days} price is: ${price:,.2f}")
+    with open(OUTPUT_FILE, "a") as out_file:
+        print(f"On day {number_of_days} price is: ${price:,.2f}", file=out_file)
