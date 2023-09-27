@@ -14,9 +14,10 @@ MAX_DECREASE = 0.05  # 5%
 MIN_PRICE = 0.01
 MAX_PRICE = 1000.0
 INITIAL_PRICE = 10.0
+number_of_days = 0
 
 price = INITIAL_PRICE
-print(f"${price:,.2f}")
+print(f"On day {number_of_days} price is: ${price:,.2f}")
 
 while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
@@ -32,4 +33,5 @@ while MIN_PRICE <= price <= MAX_PRICE:
         price_change = random.uniform(-MAX_DECREASE, 0)
 
     price *= (1 + price_change)
-    print(f"${price:,.2f}")
+    number_of_days += 1
+    print(f"On day {number_of_days} price is: ${price:,.2f}")
