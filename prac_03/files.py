@@ -23,14 +23,14 @@ with open(name_file, "w") as file:
 
 # 2)
 with open(name_file, "r") as file:
-    text = file.read()
-    print(f"Your name is {text}")
+    name = file.read()
+    print(f"Your name is {name}")
 
 # 3 & 4)
 numbers = []
 with open(number_file, "r") as file:
     for line in file:
-        numbers.append(int(line.strip()))
-result = numbers[0] + numbers[1]  # written in a way that is easily extendable for future functionality
+        numbers.append(int(line.strip()))  # written in a way that is easily extendable for future functionality
+result = numbers[0] + numbers[1]
 print(result)
 print(sum(numbers))
