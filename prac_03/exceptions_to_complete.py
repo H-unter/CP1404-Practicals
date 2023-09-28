@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 - Practical
-Fill in the TODOs to complete the task
+CP1404 Practical 03 Hunter Kruger-Ilingworth
+Checks the validity of an inputted integer
 """
 
 is_finished = False

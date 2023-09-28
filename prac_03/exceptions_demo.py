@@ -1,10 +1,12 @@
 """
-CP1404/CP5632 - Practical
+CP1404 Practical 03 Hunter Kruger-Ilingworth
 Answer the following questions:
 1. When will a ValueError occur?
 >>  when either the numerator or denominator are not numbers
 2. When will a ZeroDivisionError occur?
 >>  when the denominator is 0, and the numerator is a number
+Could you change the code to avoid the possibility of a ZeroDivisionError?
+>>  see corrected code below
 """
 denominator = 0
 try:

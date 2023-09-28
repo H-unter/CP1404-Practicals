@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 03 Hunter Kruger-Ilingworth
+Answers questions given in the practical task and generates a random integer between 0 and 100
+"""
+
 import random
 
 """What did you see on line 1?
