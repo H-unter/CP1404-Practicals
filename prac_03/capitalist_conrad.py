@@ -10,12 +10,14 @@ MAX_DECREASE = 0.05
 MIN_PRICE = 1.0
 MAX_PRICE = 100.0
 INITIAL_PRICE = 10.0
-number_of_days = 0
 
+number_of_days = 0
 price = INITIAL_PRICE
+print_message = f"On day {number_of_days} price is: ${price:,.2f}"
+
 with open(FILE_NAME, "w") as out_file:  # write to file in order to override previously written data
-    print(f"On day {number_of_days} price is: ${price:,.2f}")
-    print(f"On day {number_of_days} price is: ${price:,.2f}", file=out_file)
+    print(print_message)  # print to terminal
+    print(print_message, file=out_file)  # write to file
     while MIN_PRICE <= price <= MAX_PRICE:
         price_change = 0
         # generate a random integer of 1 or 2
@@ -31,5 +33,5 @@ with open(FILE_NAME, "w") as out_file:  # write to file in order to override pre
 
         price *= (1 + price_change)
         number_of_days += 1
-        print(f"On day {number_of_days} price is: ${price:,.2f}")
-        print(f"On day {number_of_days} price is: ${price:,.2f}", file=out_file)
+        print(print_message)  # output to terminal
+        print(print_message, file=out_file)  # write to file
