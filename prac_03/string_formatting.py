@@ -32,4 +32,4 @@ for i, number in enumerate(numbers, 1):
 print(f"{year} {name} for about ${cost:,.0f}!")
 
 for i in range(0, 151, 50):
-    print(f"{i:4}")
+    print(f"{i:3}")
