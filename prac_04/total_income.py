@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 Practical
-Starter code for cumulative total income program
+CP1404 Practical 04 Hunter Kruger-Ilingworth
+Program to generate income report based on user input
 """
 
 

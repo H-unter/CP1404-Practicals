@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 04 Hunter Kruger-Ilingworth
+Program to test functionality of lists
+"""
+
 numbers = [3, 1, 4, 1, 5, 9, 2]
 print(numbers[0])  # Output: 3
 print(numbers[-1])  # Output: 5
