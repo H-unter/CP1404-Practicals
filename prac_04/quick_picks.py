@@ -18,18 +18,18 @@ def main():
     row_length = quick_picks_number
 
     for row in range(row_length):
-        number_list = get_random_list(column_length)
-        print(', '.join([str(number) for number in number_list]))
+        numbers = get_random_list(column_length)
+        print(', '.join([str(number) for number in numbers]))
 
 
 def get_random_list(column_length):
-    number_list = []
+    numbers = []
     for column in range(column_length):
         new_number = random.randint(1, 45)
-        while new_number in number_list:  # ensure no repeated numbers
+        while new_number in numbers:  # ensure no repeated numbers
             new_number = random.randint(1, 45)
-        number_list.append(new_number)
-    return sorted(number_list)
+        numbers.append(new_number)
+    return sorted(numbers)
 
 
 main()
