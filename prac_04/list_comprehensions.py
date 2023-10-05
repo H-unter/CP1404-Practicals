@@ -29,8 +29,7 @@ print(a_names)
 # 'Ada Alan Angel Bob Jimi'
 print(" ".join(sorted(names)))
 
-# TODO: list comprehension to create a list of all the full_names in lowercase format
-# lowercase_full_names =
+lowercase_full_names = [name.lower() for name in full_names]
 
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 # TODO: list comprehension to create a list of integers from the above list of strings
