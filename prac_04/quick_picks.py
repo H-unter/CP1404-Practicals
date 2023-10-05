@@ -12,7 +12,6 @@ import random
 
 def main():
     quick_picks_number = int(input("How many quick picks? "))
-    print(quick_picks_number)
 
     column_length = 6
     row_length = quick_picks_number
