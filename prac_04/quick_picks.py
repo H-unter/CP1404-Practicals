@@ -6,3 +6,12 @@ Each line (quick pick) should not contain any repeated number.
 Each line of numbers should be displayed in sorted (ascending) order.
 Study the formatting below so that numbers align neatly.
 """
+
+quick_picks_number = int(input("How many quick picks? "))
+print(quick_picks_number)
+
+column_length = 6
+row_length = quick_picks_number
+
+for row in range(row_length):
+    print(column_length * " test ")
