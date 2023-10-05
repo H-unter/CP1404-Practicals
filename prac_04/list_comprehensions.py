@@ -41,4 +41,4 @@ large_numbers = [number for number in numbers if number > 9]
 
 # Question 4:
 long_names = [name.split()[1] for name in full_names if len(name) > 11]
-print(long_names)
+print(', '.join(long_names))
