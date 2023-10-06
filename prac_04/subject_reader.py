@@ -7,12 +7,13 @@ FILENAME = "subject_data.txt"
 
 
 def main():
+    """Read and display subject data stored in external file"""
     data = get_data()
     print([f"{data[i][0]} is taught by {data[i][1]} and has {data[i][2]} students" for i in range(len(data))])
 
 
 def get_data():
-    """Read data from file formatted like: subject,lecturer,number of students."""
+    """Read data and print raw result"""
     data = []
     input_file = open(FILENAME)
     for line in input_file:
