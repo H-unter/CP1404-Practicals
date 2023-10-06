@@ -14,8 +14,11 @@ print(7 in numbers)  # Output: False
 print("3" in numbers)  # Output: False
 print(numbers + [6, 5, 3])  # Output: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 6, 5, 3]
 
+# Change the first element of numbers to "ten"
 numbers[0] = "ten"
+# Change the last element of numbers to 1
 numbers[-1] = 1
-print(len(numbers))
-print([numbers[i] for i in range(len(numbers)) if i > 1])
+# Get all the elements from numbers except the first two
+print(numbers[2:])
+# Print whether 9 is an element of numbers
 print(9 in numbers)
