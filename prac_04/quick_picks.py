@@ -14,6 +14,7 @@ import random
 
 
 def main():
+    # TODO: Add constants
     quick_picks_number = int(input("How many quick picks? "))
 
     column_length = 6

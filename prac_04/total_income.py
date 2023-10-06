@@ -18,7 +18,6 @@ def main():
 
 def print_report(incomes):
     """Print income report given input incomes"""
-    number_of_months = len(incomes)
     print("\nIncome Report\n-------------")
     total = 0
     for month, income in enumerate(incomes, 1):
