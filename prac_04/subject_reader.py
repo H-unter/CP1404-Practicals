@@ -9,7 +9,7 @@ FILENAME = "subject_data.txt"
 def main():
     """Read and display subject data stored in external file"""
     data = get_data()
-    print([f"{data[i][0]} is taught by {data[i][1]} and has {data[i][2]} students" for i in range(len(data))])
+    print_subject_info(data)
 
 
 def get_data():
@@ -24,6 +24,12 @@ def get_data():
         data.append(parts)
     input_file.close()
     return data
+
+
+def print_subject_info(data):
+    """Print data in a readable format"""
+    for entry in range(len(data)):
+        print(f"{data[entry][0]} is taught by {data[entry][1]} and has {data[entry][2]} students")
 
 
 main()
