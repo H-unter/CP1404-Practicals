@@ -23,18 +23,18 @@ def main():
     row_length = quick_picks_number
 
     for row in range(row_length):
-        numbers = get_random_list(column_length)
-        print(', '.join([str(number) for number in numbers]))
+        quick_pick = get_quick_pick(column_length)
+        print(', '.join([str(number) for number in quick_pick]))
 
 
-def get_random_list(column_length):
-    numbers = []
+def get_quick_pick(column_length):
+    quick_picks = []
     for column in range(column_length):
-        new_number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
-        while new_number in numbers:  # ensure no repeated numbers
-            new_number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
-        numbers.append(new_number)
-    return sorted(numbers)
+        new_pick = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
+        while new_pick in quick_picks:  # ensure no repeated numbers
+            new_pick = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
+        quick_picks.append(new_pick)
+    return sorted(quick_picks)
 
 
 main()
