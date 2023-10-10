@@ -9,7 +9,7 @@ COLOUR_TO_HEX = {
     'AntiqueWhite': '#faebd7',
     'AntiqueWhite1': '#ffefdb',
     'AntiqueWhite2': '#eedfcc'
-}
+}  # raw output from website
 
 lowercase_colour_to_hex = {colour.lower(): hex_value for colour, hex_value in COLOUR_TO_HEX.items()}
 print(lowercase_colour_to_hex)
