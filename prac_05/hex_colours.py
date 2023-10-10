@@ -12,3 +12,10 @@ COLOUR_TO_HEX = {
 }
 
 print(COLOUR_TO_HEX)
+requested_colour = input("Enter colour name: ")
+while requested_colour != "":
+    try:
+        print(f"{requested_colour} Requested hex value: {COLOUR_TO_HEX[requested_colour]}")
+    except KeyError:
+        print("Invalid colour")
+    requested_colour = input("Enter colour name: ")
