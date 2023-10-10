@@ -13,7 +13,8 @@ COLOUR_TO_HEX = {
 
 lowercase_colour_to_hex = {colour.lower(): hex_value for colour, hex_value in COLOUR_TO_HEX.items()}
 print(lowercase_colour_to_hex)
-while 1:
+requested_colour = input("Enter colour name: ").lower()
+while requested_colour != "":
     requested_colour = input("Enter colour name: ").lower()
     if requested_colour in list(lowercase_colour_to_hex.keys()):
         print(f"{requested_colour} Requested hex value: {lowercase_colour_to_hex[requested_colour]}")
