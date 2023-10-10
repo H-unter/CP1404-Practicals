@@ -1,8 +1,7 @@
 """
 Word Occurrences
 Estimate: 35 minutes
-Actual: 5 minutes
-8:18 start
+Actual: 11 minutes
 """
 
 sentence = input("Text: ").strip().split(" ")  # error check
