@@ -1,4 +1,6 @@
-""""From data:
+""""
+CP1404 Practical 05 Hunter Kruger-Ilingworth
+From data:
 the champions and how many times they have won.
 the countries of the champions in alphabetical order
 

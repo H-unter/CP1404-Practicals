@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical
+CP1404 Practical 05 Hunter Kruger-Ilingworth
 State names in a dictionary
 File needs reformatting
 """

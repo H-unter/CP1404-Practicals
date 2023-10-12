@@ -1,5 +1,6 @@
 """
-Word Occurrences
+CP1404 Practical 05 Hunter Kruger-Ilingworth
+Program to determine word occurrences for a given sentence
 Estimate: 35 minutes
 Actual: 11 minutes
 """

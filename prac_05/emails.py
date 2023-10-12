@@ -1,6 +1,8 @@
 """
-Start 8:31
-Working 8:46"""
+CP1404 Practical 05 Hunter Kruger-Ilingworth
+Estimate: 30 mins
+Actual: 37 mins
+"""
 
 
 def main():

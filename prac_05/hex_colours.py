@@ -1,3 +1,8 @@
+""""
+CP1404 Practical 05 Hunter Kruger-Ilingworth
+Program to determine hex value from colour name
+"""
+
 COLOUR_TO_HEX = {
     'Absolute Zero': '#0048ba',
     'Acid Green': '#b0bf1a',
