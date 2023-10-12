@@ -33,6 +33,9 @@ with open(file_name, "r", encoding="utf-8-sig") as in_file:
             name_to_times_won[name] += 1
         else:
             name_to_times_won[name] = 1
-
-print(name_to_times_won)
-print(victorious_countries)
+print(f"Wimbledon Champions:")
+for name, times_won in name_to_times_won.items():
+    print(f"{name} {times_won}")
+victorious_countries.sort()
+print(f"These {len(victorious_countries)} countries have won Wimbledon: ")
+print(', '.join([country for country in victorious_countries]))
