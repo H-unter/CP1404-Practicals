@@ -20,7 +20,7 @@ lowercase_colour_to_hex = {colour.lower(): hex_value for colour, hex_value in CO
 
 requested_colour = input("Enter colour name: ").lower()
 while requested_colour != "":
-    if requested_colour in list(lowercase_colour_to_hex.keys()):
+    if requested_colour in lowercase_colour_to_hex:
         print(f"The hex value of {requested_colour} is {lowercase_colour_to_hex[requested_colour]}")
     else:
         print(f"Error: {requested_colour} not in colour list")
