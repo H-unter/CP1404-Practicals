@@ -9,7 +9,7 @@ def main():
     email_to_name = {}
     email = input("Email: ")
     while email != "":
-        name = email.split("@")[0]  # take portion before @ symbol
+        name = infer_name_from_email(email)
         name_confirmation = input(f"is your name {name}? (Y/n) ").lower()
         if name_confirmation not in ['y', '']:
             name = input("Name: ")
@@ -18,6 +18,13 @@ def main():
     print("")  # newline to match sample output
     for email, name in email_to_name.items():
         print(f"{name} ({email})")
+
+
+def infer_name_from_email(email):
+    name = email.split("@")[0]  # take portion before @ symbol
+    name = name.split(".")
+    name = " ".join(name).title()
+    return name
 
 
 main()
