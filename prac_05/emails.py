@@ -6,6 +6,7 @@ Actual: 37 mins
 
 
 def main():
+    """Ask user for email and name and store into dictionary"""
     email_to_name = {}
     email = input("Email: ")
     while email != "":
@@ -21,7 +22,8 @@ def main():
 
 
 def infer_name_from_email(email):
-    name = email.split("@")[0]  # take portion before @ symbol
+    """Parse email to infer name"""
+    name = email.split("@")[0]
     name = name.split(".")
     name = " ".join(name).title()
     return name
