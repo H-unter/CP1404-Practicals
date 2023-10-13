@@ -1,29 +1,16 @@
 """"
 CP1404 Practical 05 Hunter Kruger-Ilingworth
-From data:
+From Wimbledon:
 the champions and how many times they have won.
 the countries of the champions in alphabetical order
-
-Sample output:
-Wimbledon Champions:
-Rod Laver 2
-...
-Lleyton Hewitt 1
-Roger Federer 8
-Rafael Nadal 2
-Novak Djokovic 7
-Andy Murray 2
-
-These 12 countries have won Wimbledon:
-AUS, CRO, ESP, FRG, GBR, GER, NED, SRB, SUI, SWE, TCH, USA
 """
 import csv
 
 
 def main():
+    """Read Wimbledon data from file and output interesting findings"""
     name_to_times_won = {}
     victorious_countries = []
-
     file_name = 'wimbledon.csv'
     populate_data(file_name, name_to_times_won, victorious_countries)
     print_champions_data(name_to_times_won)
@@ -31,12 +18,14 @@ def main():
 
 
 def print_countries_data(victorious_countries):
+    """Print country winning data"""
     victorious_countries.sort()
-    print(f"These {len(victorious_countries)} countries have won Wimbledon: ")
+    print(f"\nThese {len(victorious_countries)} countries have won Wimbledon: ")
     print(', '.join([country for country in victorious_countries]))
 
 
 def print_champions_data(name_to_times_won):
+    """Print athlete winning data"""
     print(f"Wimbledon Champions:")
     for name, times_won in name_to_times_won.items():
         print(f"{name} {times_won}")
