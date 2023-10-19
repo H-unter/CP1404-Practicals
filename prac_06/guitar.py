@@ -8,7 +8,7 @@ class Guitar:
         return f"{self.name} ({self.year}) : ${self.cost}"
 
     def get_age(self):
-        return (2023 - self.year)
+        return 2023 - self.year
 
     def is_vintage(self):
         return self.get_age() > 50
