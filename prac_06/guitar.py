@@ -1,3 +1,9 @@
+"""
+CP1404 Practical 06 Hunter Kruger-Ilingworth
+Guitar Class
+"""
+
+
 class Guitar:
     def __init__(self, name="", year=0, cost=0):
         """Initialise guitar instance"""

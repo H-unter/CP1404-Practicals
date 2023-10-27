@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 06 Hunter Kruger-Ilingworth
+"""
+
+
 class ProgrammingLanguage:
     """Represent the key information of a programming language"""
 
