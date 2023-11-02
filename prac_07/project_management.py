@@ -5,7 +5,6 @@ Break: 12:49
 Resume: 1:30
 """
 from prac_07.project import Project
-import csv
 
 FILENAME = "projects.txt"
 
@@ -40,7 +39,6 @@ def main():
             pass
         else:
             print("Invalid menu choice")
-            menu_choice = input(f"{MENUSTRING}").lower()
         menu_choice = input(f"{MENUSTRING}").lower()
 
 
