@@ -1,6 +1,8 @@
 """
 Time estimate: 1:30
 Start time: 12:21
+Break: 12:49
+Resume: 1:30
 """
 from prac_07.project import Project
 import csv
@@ -19,25 +21,27 @@ MENUSTRING = """- (L)oad projects
 
 def main():
     projects = read_from_file(FILENAME)
-    print(projects)
 
     menu_choice = input(f"{MENUSTRING}").lower()
     while menu_choice != "q":
         if menu_choice == "l":  # (L)oad projects
-            pass
+            projects = read_from_file(FILENAME)
         elif menu_choice == "s":  # (S)ave projects
             pass
         elif menu_choice == "d":  # (D)isplay projects
-            pass
+            for project in projects:
+                print(project)
         elif menu_choice == "f":  # (F)ilter projects by date
+            # add another
             pass
         elif menu_choice == "a":  # (A)dd new project
-            pass
+            projects = add_new_project(projects)
         elif menu_choice == "u":  # (U)pdate project
             pass
         else:
             print("Invalid menu choice")
             menu_choice = input(f"{MENUSTRING}").lower()
+        menu_choice = input(f"{MENUSTRING}").lower()
 
 
 def read_from_file(FILENAME):
@@ -47,6 +51,17 @@ def read_from_file(FILENAME):
         for line in in_file:
             parts = line.strip().split('\t')
             projects.append(Project(parts[0], parts[1], parts[2], parts[3], parts[4]))  # add to list of guitars
+    return projects
+
+
+def add_new_project(projects):
+    name = input("Let's add a new project\nName: ")
+    start_date = input("Start date (dd/mm/yy): ")
+    priority = input("Priority: ")
+    estimated_cost = input("Cost estimate: $")
+    completion_percentage = input("Percent complete: ")
+    new_project = Project(name, start_date, priority, estimated_cost, completion_percentage)
+    projects.append(new_project)
     return projects
 
 
