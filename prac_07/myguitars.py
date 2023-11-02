@@ -14,8 +14,25 @@ def main():
             print(line)
             guitars.append(Guitar(line[0], int(line[1]), float(line[2])))  # add to list of guitars
 
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = int(input("Cost: "))
+        guitars.append(Guitar(name, year, cost))  # add to list of guitars
+        print(f"{name} ({year}) : ${cost} added.")
+        name = input("Name: ")
+
     guitars.sort()
-    print(guitars)
+
+    for guitar in guitars:
+        print(guitar)
+
+    with open(FILENAME, "w", newline='') as out_file:
+        writer = csv.writer(out_file)
+        for guitar in guitars:
+            print(guitar)
+            writer.writerow([guitar.name, guitar.year, guitar.cost])
+    print(f"{len(guitars)} guitars saved to {FILENAME}")
 
 
 main()
