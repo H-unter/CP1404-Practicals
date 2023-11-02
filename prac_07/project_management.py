@@ -3,6 +3,7 @@ Time estimate: 1:30
 Start time: 12:21
 Break: 12:49
 Resume: 1:30
+Stop 2:30
 """
 import datetime
 
@@ -21,14 +22,13 @@ MENUSTRING = """- (L)oad projects
 
 
 def main():
-    projects = read_from_file(FILENAME)
-
+    projects = read_from_file()
     menu_choice = input(f"{MENUSTRING}").lower()
     while menu_choice != "q":
         if menu_choice == "l":  # (L)oad projects
-            projects = read_from_file(FILENAME)
+            projects = read_from_file()
         elif menu_choice == "s":  # (S)ave projects
-            pass
+            write_to_file(projects)
         elif menu_choice == "d":  # (D)isplay projects
             display_projects(projects)
         elif menu_choice == "f":  # (F)ilter projects by date
@@ -42,14 +42,21 @@ def main():
         menu_choice = input(f"{MENUSTRING}").lower()
 
 
-def read_from_file(FILENAME):
+def read_from_file():
     projects = []
     with open(FILENAME, "r") as in_file:
         in_file.readline()  # get rid of header
         for line in in_file:
             parts = line.strip().split('\t')
-            projects.append(Project(parts[0], parts[1], parts[2], parts[3], parts[4]))  # add to list of guitars
+            projects.append(Project(parts[0], parts[1], parts[2], parts[3], parts[4]))  # add to list of projects
     return projects
+
+
+def write_to_file(projects):
+    with open(FILENAME, "w") as out_file:
+        print(f"Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=out_file)
+        for project in projects:
+            out_file.write(project.to_line() + '\n')
 
 
 def display_projects(projects):
@@ -71,12 +78,15 @@ def add_new_project(projects):
 def update_project(projects):
     for i, project in enumerate(projects):
         print(f"{i} {project}")
-    edited_project = projects[int(input("Project choice: "))]
-    print(edited_project)
-    completion_percentage = int(input("New Percentage: "))
-    priority = int(input("New Priority: "))
-    edited_project.completion_percentage = completion_percentage
-    edited_project.priority = priority
+    try:
+        edited_project = projects[int(input("Project choice: "))]
+        print(edited_project)
+        completion_percentage = int(input("New Percentage: "))
+        priority = int(input("New Priority: "))
+        edited_project.completion_percentage = completion_percentage
+        edited_project.priority = priority
+    except (ValueError, IndexError):
+        print(f"An error occurred")
     return projects
 
 
