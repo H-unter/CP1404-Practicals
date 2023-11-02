@@ -1,10 +1,9 @@
 from prac_07.guitar import Guitar
-
-# Write a program to read all of these guitars and store them in a list of Guitar objects, using the class that you wrote recently.
-# Display these using a loop.
-FILENAME = "guitars.csv"
 import csv
-import operator
+
+# Write a program to read all of these guitars and store them in a list of Guitar objects, using the class that you
+# wrote recently. Display these using a loop.
+FILENAME = "guitars.csv"
 
 
 def main():
