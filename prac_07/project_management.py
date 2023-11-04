@@ -22,6 +22,7 @@ MENUSTRING = """- (L)oad projects
 
 
 def main():
+    """"Add, edit and manipulate list of projects"""
     projects = read_from_file()
     menu_choice = input(f"{MENUSTRING}").lower()
     while menu_choice != "q":
@@ -43,6 +44,7 @@ def main():
 
 
 def read_from_file():
+    """"Load projects from file"""
     projects = []
     with open(FILENAME, "r") as in_file:
         in_file.readline()  # get rid of header
@@ -53,6 +55,7 @@ def read_from_file():
 
 
 def write_to_file(projects):
+    """"Write changes made to file"""
     with open(FILENAME, "w") as out_file:
         print(f"Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=out_file)
         for project in projects:
@@ -60,11 +63,13 @@ def write_to_file(projects):
 
 
 def display_projects(projects):
+    """Display projects"""
     for project in projects:
         print(project)
 
 
 def add_new_project(projects):
+    """"Add new project"""
     name = input("Let's add a new project\nName: ")
     start_date = input("Start date (dd/mm/yy): ")
     priority = input("Priority: ")
@@ -76,6 +81,7 @@ def add_new_project(projects):
 
 
 def update_project(projects):
+    """"Update completion and priority of project"""
     for i, project in enumerate(projects):
         print(f"{i} {project}")
     try:
@@ -91,6 +97,7 @@ def update_project(projects):
 
 
 def filter_projects(projects):
+    """"Filter projects by date"""
     cutoff_date = input("Show projects that start after date (dd/mm/yy): ")
     datetime.datetime.strptime(cutoff_date, "%d/%m/%y").date()
     filtered_projects = [project for project in projects if project.start_date > cutoff_date]
