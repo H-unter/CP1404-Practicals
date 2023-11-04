@@ -46,11 +46,14 @@ def main():
 def read_from_file():
     """"Load projects from file"""
     projects = []
-    with open(FILENAME, "r") as in_file:
-        in_file.readline()  # get rid of header
-        for line in in_file:
-            parts = line.strip().split('\t')
-            projects.append(Project(parts[0], parts[1], parts[2], parts[3], parts[4]))  # add to list of projects
+    try:
+        with open(FILENAME, "r") as in_file:
+            in_file.readline()  # get rid of header
+            for line in in_file:
+                parts = line.strip().split('\t')
+                projects.append(Project(parts[0], parts[1], parts[2], parts[3], parts[4]))  # add to list of projects
+    except FileNotFoundError:
+        print(f"No such file: {FILENAME}")
     return projects
 
 
@@ -98,10 +101,14 @@ def update_project(projects):
 
 def filter_projects(projects):
     """"Filter projects by date"""
-    cutoff_date = input("Show projects that start after date (dd/mm/yy): ")
-    datetime.datetime.strptime(cutoff_date, "%d/%m/%y").date()
-    filtered_projects = [project for project in projects if project.start_date > cutoff_date]
-    display_projects(filtered_projects)
+    try:
+        cutoff_date = input("Show projects that start after date (dd/mm/yy): ")
+        datetime.datetime.strptime(cutoff_date, "%d/%m/%y").date()
+        filtered_projects = [project for project in projects if project.start_date > cutoff_date]
+        display_projects(filtered_projects)
+    except ValueError:
+        print("Invalid date format. Please use dd/mm/yy.")
 
 
-main()
+if __name__ == "__main__":
+    main()
