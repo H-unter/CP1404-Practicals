@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical
+CP1404 Practical 07 Hunter Kruger-Ilingworth
 File and class example - opens/reads a file, stores in objects of custom class
 (contains multiple versions for demonstration: using csv and namedtuple)
 """

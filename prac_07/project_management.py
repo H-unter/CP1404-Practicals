@@ -1,12 +1,10 @@
 """
-Time estimate: 1:30
-Start time: 12:21
-Break: 12:49
-Resume: 1:30
-Stop 2:30
+CP1404 Practical 07 Hunter Kruger-Ilingworth
+Time estimate: 1.5 hours
+Actual Time: >2 hours
 """
-import datetime
 
+import datetime
 from prac_07.project import Project
 
 FILENAME = "projects.txt"
@@ -66,9 +64,13 @@ def write_to_file(projects):
 
 
 def display_projects(projects):
-    """Display projects"""
-    for project in projects:
-        print(project)
+    """Display projects stratified by if they are complete"""
+    print("Incomplete projects")
+    incomplete_projects = [f"\t{project}" for project in projects if not project.is_complete()]
+    print('\n'.join(incomplete_projects))
+    print("Complete projects")
+    complete_projects = [f"\t{project}" for project in projects if project.is_complete()]
+    print('\n'.join(complete_projects))
 
 
 def add_new_project(projects):
@@ -87,15 +89,29 @@ def update_project(projects):
     """"Update completion and priority of project"""
     for i, project in enumerate(projects):
         print(f"{i} {project}")
-    try:
-        edited_project = projects[int(input("Project choice: "))]
-        print(edited_project)
+
+    project_choice_index = int(input("Project choice: "))
+    while (int(project_choice_index) >= len(projects)):
+        print("Invalid choice")
+        project_choice_index = int(input("Project choice: "))
+    project_choice = projects[project_choice_index]
+    print(project_choice)
+    completion_percentage = int(input("New Percentage: "))
+    while not (0 <= completion_percentage <= 100):
+        print("Invalid percentage")
         completion_percentage = int(input("New Percentage: "))
-        priority = int(input("New Priority: "))
-        edited_project.completion_percentage = completion_percentage
-        edited_project.priority = priority
-    except (ValueError, IndexError):
-        print(f"An error occurred")
+
+    priority = input("New Priority: ")
+    while not priority.isdigit():
+        print("Invalid priority")
+        priority = input("New Priority: ")
+    priority = int(priority)
+
+    project_choice.completion_percentage = completion_percentage
+    project_choice.priority = priority
+    # update the project list in python
+    projects[project_choice_index] = project_choice
+
     return projects
 
 
