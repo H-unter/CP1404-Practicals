@@ -6,34 +6,32 @@ Miles to kilometers conversion app
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
-
-"""TODO: error check!!!!!"""
+from kivy.properties import StringProperty
 
 
 class ConvertMilesKmApp(App):
     """ConvertMilesKmApp is a Kivy App for distance unit conversions """
+    kilometers = StringProperty()
 
     def build(self):
-        """ build the Kivy app from the kv file """
+        """ build the Kivy app"""
         Window.size = (1000, 500)
         self.title = "Distance Unit Conversions"
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
-    def handle_conversion(self, value):
+    def handle_conversion_press(self, value):
+        """Convert the miles input into kilometers using conversion factor"""
         try:
-            result = str(float(value) * 1.609)
-            self.root.ids.output_label.text = str(result)
+            self.kilometers = str(float(value) * 1.609)
         except ValueError:
-            pass
+            self.kilometers = str("undefined")
 
-    def increment_input(self, value):
-        try:
-            current_value = float(self.root.ids.input_number.text)
-            new_value = current_value + float(value)
-            self.root.ids.input_number.text = str(new_value)
-        except ValueError:
-            self.root.ids.input_number.text = "Enter a number"
+    def increment_input(self, delta):
+        """Increment or decrement the miles input"""
+        current_value = float(self.root.ids.input_number.text)
+        new_value = current_value + float(delta)
+        self.root.ids.input_number.text = str(new_value)
 
 
 ConvertMilesKmApp().run()
