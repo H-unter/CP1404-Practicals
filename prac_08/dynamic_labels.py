@@ -10,7 +10,7 @@ from kivy.properties import StringProperty
 
 
 class DynamicLabelsApp(App):
-    """Main program - Kivy app to dynamically create labels"""
+    """Kivy app to dynamically create labels"""
     status_text = StringProperty()
 
     def __init__(self, **kwargs):
