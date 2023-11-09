@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 08 Hunter Kruger-Ilingworth
+Miles to kilometers conversion app
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
@@ -19,7 +24,7 @@ class ConvertMilesKmApp(App):
         try:
             result = str(float(value) * 1.609)
             self.root.ids.output_label.text = str(result)
-        except:
+        except ValueError:
             pass
 
     def increment_input(self, value):

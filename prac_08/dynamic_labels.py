@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 08 Hunter Kruger-Ilingworth
+Dynamic labels app
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
