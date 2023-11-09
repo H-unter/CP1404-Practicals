@@ -10,7 +10,7 @@ from kivy.properties import StringProperty
 
 
 class DynamicLabelsApp(App):
-    """Main program - Kivy app to demo dynamic label creation."""
+    """Main program - Kivy app to dynamically create labels"""
     status_text = StringProperty()
 
     def __init__(self, **kwargs):
@@ -19,14 +19,14 @@ class DynamicLabelsApp(App):
         self.names = ["Ben", "Liam", "Joel", "David", "John", "Darcy", "Hunter"]
 
     def build(self):
-        """Build the Kivy GUI."""
+        """Build the Kivy GUI"""
         self.title = "Dynamic Labels"
         self.root = Builder.load_file('dynamic_labels.kv')
         self.create_labels()
         return self.root
 
     def create_labels(self):
-        """Create labels from data and add them to the GUI."""
+        """Create labels from data and add them to the GUI"""
         for name in self.names:
             new_label = Label(text=name)
             self.root.ids.main.add_widget(new_label)
