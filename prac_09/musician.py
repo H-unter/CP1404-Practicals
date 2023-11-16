@@ -1,4 +1,7 @@
-"""Musician class for CP1404"""
+"""
+CP1404 Practical 09 Hunter Kruger-Ilingworth
+Musician class for CP1404
+"""
 
 
 class Musician:

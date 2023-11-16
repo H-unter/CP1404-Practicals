@@ -1,3 +1,8 @@
+"""
+CP1404 Practical 09 Hunter Kruger-Ilingworth
+SilverServiceTaxi class
+"""
+
 from taxi import Taxi
 
 

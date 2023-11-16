@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical
+CP1404 Practical 09 Hunter Kruger-Ilingworth
 Car class
 it adds new attributes (price_per_km, current_fare_distance) and methods (get_fare, start_fare)
 it overrides methods (drive, __init__ and __str__) to take account of the characteristics of a Taxi.
