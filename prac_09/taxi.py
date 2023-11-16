@@ -1,17 +1,19 @@
 """
 CP1404/CP5632 Practical
 Car class
+it adds new attributes (price_per_km, current_fare_distance) and methods (get_fare, start_fare)
+it overrides methods (drive, __init__ and __str__) to take account of the characteristics of a Taxi.
 """
-from prac_09.car import Car
+from car import Car
 
 
 class Taxi(Car):
     """Specialised version of a Car that includes fare costs."""
 
-    def __init__(self, name, fuel, price_per_km):
+    def __init__(self, name, fuel):
         """Initialise a Taxi instance, based on parent class Car."""
-        super().__init__(name, fuel)
-        self.price_per_km = price_per_km
+        super().__init__(name, fuel)  # inheret car attributes
+        self.price_per_km = 1.23
         self.current_fare_distance = 0
 
     def __str__(self):
