@@ -4,7 +4,7 @@ Hunter Kruger-Ilingworth - Engineering Student in JCU Cairns
 
 ## Information
 
-This repository is for the Python based CP1404 Subject. As an engineer,
+This repository is for the Python based CP1404 Subject.
 from this subject I have learned
 
 - Good Naming conventions
