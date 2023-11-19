@@ -7,14 +7,18 @@ from taxi import Taxi
 
 
 class SilverServiceTaxi(Taxi):
+    """Represent a SilverServiceTaxi - a child of the Taxi class"""
+
     def __init__(self, name, fuel, fanciness):
+        """Initialise an instance of a SilverServiceTaxi"""
         super().__init__(name, fuel)
         self.fanciness = fanciness
         self.price_per_km *= fanciness
         self.flagfall = 4.50
 
     def __str__(self):
-        return f"{self.name}, fuel={self.fuel}, odo={self.odometer}, {self.current_fare_distance}km on current fare, {self.price_per_km}/km plus flagfall of ${self.flagfall}"
+        """Return a string representation of a SilverServiceTaxi"""
+        return f"{super().__str__()} plus flagfall fare of ${self.flagfall}"
 
     def drive(self, distance):
         """Drive like parent Taxi"""

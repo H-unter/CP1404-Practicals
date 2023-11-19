@@ -12,7 +12,7 @@ class Taxi(Car):
 
     def __init__(self, name, fuel):
         """Initialise a Taxi instance, based on parent class Car."""
-        super().__init__(name, fuel)  # inheret car attributes
+        super().__init__(name, fuel)
         self.price_per_km = 1.23
         self.current_fare_distance = 0
 

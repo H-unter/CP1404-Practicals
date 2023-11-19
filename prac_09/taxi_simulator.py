@@ -11,27 +11,32 @@ MENU_STRING = f"""
 
 
 def main():
+    """Taxi simulator that makes use of the Taxi and SilverServiceTaxi subclasses"""
     print("Let's drive! ")
     taxis = [Taxi("Prius", 100),
              SilverServiceTaxi("Limo", 100, 2),
              SilverServiceTaxi("Hummer", 200, 4)]
-    my_taxi = SilverServiceTaxi("Gerald", 150, 60)
     current_taxi = None
-    bill = 0
+    bill = 0.0
 
     print(f"Bill to date: ${bill}")
     choice = input(MENU_STRING).lower()
     while choice != 'q':
         if choice == 'c':
-            current_taxi = choose_taxi(taxis)
+            current_taxi = choose_taxi(taxis, current_taxi)
         elif choice == 'd':
             bill = drive_taxi(taxis, current_taxi, bill)
         print(f"Bill to date: ${bill}")
         choice = input(MENU_STRING).lower()
+    print(f"Total trip cost: ${bill:.2f}")
+    print("Taxis are now:")
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
 
 
 def drive_taxi(taxis, current_taxi, bill):
-    if current_taxi == None:
+    """Drive the chosen Taxi and update the bill"""
+    if not current_taxi:
         print("You need to choose a taxi before you can drive")
     else:
         distance = int(input("Drive how far? "))
@@ -41,13 +46,19 @@ def drive_taxi(taxis, current_taxi, bill):
     return bill
 
 
-def choose_taxi(taxis):
+def choose_taxi(taxis, current_taxi):
+    """Choose a Taxi"""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {taxi}")
-    taxi_choice = int(input("Choose taxi: "))
-    while taxi_choice not in range(0, len(taxis)):
-        taxi_choice = input("Choose taxi in range: ")
-    return taxis[taxi_choice]
+    try:
+        taxi_choice = int(input("Choose taxi: "))
+        current_taxi = taxis[taxi_choice]
+    except ValueError:
+        print("Not a valid number")
+    except IndexError:
+        print("Invalid option")
+    return current_taxi
 
 
-main()
+if __name__ == "__main__":
+    main()

@@ -8,6 +8,8 @@ import random
 
 
 class UnreliableCar(Car):
+    """UnreliableCar class is a subclass of Car"""
+
     def __init__(self, name, fuel, reliability):
         """Initialise an unreliable car instance, based on parent class Car."""
         super().__init__(name, fuel)
