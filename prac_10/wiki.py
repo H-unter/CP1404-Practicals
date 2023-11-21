@@ -2,5 +2,8 @@ import wikipedia
 
 query = input("Search Wikipedia: ")
 while query != "":
-    print(wikipedia.summary(query))
+    page_result = wikipedia.page(query)
+    print(page_result.title)
+    print(page_result.url)
+    print(page_result.summary)
     query = input("Search Wikipedia: ")
