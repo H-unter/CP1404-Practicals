@@ -23,7 +23,8 @@ component would be marked out of 4,
 making
 it much more fair for the student.
 
-https://github.com/ShaneLind/cp1404practicals/pull/2
-https://github.com/ThomasMehes/cp1404practicals/pull/8
+### [First Review](https://github.com/ShaneLind/cp1404practicals/pull/2)
+
+### [Last Review](https://github.com/ThomasMehes/cp1404practicals/pull/8)
 
 
