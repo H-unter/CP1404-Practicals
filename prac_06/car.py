@@ -34,3 +34,7 @@ class Car:
             self.fuel -= distance
         self._odometer += distance
         return distance
+
+    @property
+    def odometer(self):
+        return self._odometer
