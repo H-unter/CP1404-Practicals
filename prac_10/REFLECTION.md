@@ -18,7 +18,7 @@ didn't
 bother to review my code until after submission. Furthermore, making the practical marked out of 4 means you can lose a
 whole 25% of
 your grade for an error in only one component of the weekly workshop. As it stands, a minor error can disproportionately
-affect the grade, which seems unfair. I would fix this so that if a weekly practical had 5 tasks/components, each
+affect the grade, which is unfair. I would fix this so that if a weekly practical had 5 tasks/components, each
 component would be marked out of 4,
 making
 it much more fair for the student.
