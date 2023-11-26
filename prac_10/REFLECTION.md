@@ -5,7 +5,7 @@
 - regarding code reviews, what have you learned from both being reviewed and doing reviews?
 - regarding the practical tasks overall, what would you change if you were in charge of the subject?
 
-My estimates didn't stray too far from reality, towards the end of the subject there were occaisions where it took much
+My estimates didn't stray too far from reality, towards the end of the subject there were occasions where it took much
 longer than expected, though.
 
 Code reviews taught me that reading someone else's code is difficult, and to provide critical analysis to someone's code
